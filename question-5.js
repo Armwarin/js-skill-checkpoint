@@ -2,6 +2,11 @@
 
 function calculateTotalPrice() {
   // เริ่มเขียนโค้ดตรงนี้
+  let totalPrice = 0;
+  for (let item of cart) {
+    totalPrice += item.price * item.quantity;
+  }
+  return totalPrice;
 }
 
 // ตัวอย่างการใช้งาน
@@ -11,5 +16,6 @@ const cart = [
   { name: "banana", price: 15, quantity: 1 },
   { name: "orange", price: 5, quantity: 3 },
 ];
-
 console.log(calculateTotalPrice(cart)); // ผลลัพธ์จากการ Execute ตัว Function จะต้องได้: 50
+
+
